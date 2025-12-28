@@ -22,15 +22,7 @@ const Player = () => {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMWE2ZjNiZTEwYzdmYWQ3ZTVjZWM3MzhiNTYzZWNmOCIsIm5iZiI6MTc1NjMwNDUzMi4yMjUsInN1YiI6IjY4YWYxNDk0MjE4ZWMyMzA5YmYzOTNhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hx7UJxJG3Dpks-Fntxz6pmGtLokKUxZjAMuD_NMvp9I'
   }
 };
-//อันที่ผิด
-// useEffect(() => {
-//   fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
-//   .then(res => res.json())
-//   console.log(res)
-//   .then(res => setApiData(res.results[0]))
-//   .catch(err => console.error(err));
-// }, [])
-//อันที่ถูก
+
 useEffect(() => {
   fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
     .then(res => res.json())

@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 const Cards = ({ title, category }) => {
   const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
 
-  //3. After copy and paste set this variable for collected the response from api request
   const [apiData, setApiData] = useState([]);
 
   const cardsRef = useRef();
 
-  //1. copy get request from TMDB
   const options = {
     method: "GET",
     headers: {
