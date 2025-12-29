@@ -1,16 +1,86 @@
-# React + Vite
+# 🎬 Netflix Clone (React + Firebase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Netflix-inspired web application built with **React**, **Firebase Authentication**, and **TMDB API**.  
 
-Currently, two official plugins are available:
+This project demonstrates a complete authentication flow, protected routes, and dynamic movie data fetching in a real-world application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 Firebase Authentication (Email / Password)
+- 🔒 Protected Routes (Only logged-in users can access content)
+- ⏳ Loading Spinner while checking auth state
+- 🎬 Netflix-style redirect flow
+- 📺 Movie data from TMDB API
+- ▶️ Trailer playback using YouTube embed
+- 🚪 Login / Sign Up / Logout
+- 📱 Fully responsive UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- **Frontend**: React + Vite
+- **Routing**: React Router DOM
+- **Authentication**: Firebase Auth
+- **Database**: Firestore
+- **API**: The Movie Database (TMDB)
+- **Styling**: CSS
+- **Notifications**: React Toastify
+
+---
+
+## 📁 Project Structure
+
+src/
+├── assets/ # Images & icons
+├── components/
+│ ├── Cards/
+| │ └── Cards.css
+| │ └── Cards.jsx
+│ ├── Footer/
+| │ └── Footer.css
+| │ └── Footer.jsx
+│ ├── Navbar/
+| │ └── Navbar.css
+| │ └── Navbar.jsx
+│ ├── ProtectedRoute.jsx
+│ ├── AuthLoading.jsx
+├── context/
+│ └── AuthContext.jsx
+├── pages/
+│ ├── Home/
+|    └── Home.jsx
+|    └── Home.css
+│ ├── Login/
+|    └── Login.css
+|    └── Login.jsx
+│ ├── Player/
+|    └── Player.css
+|    └── Player.jsx
+├── App.jsx
+├── firebase.js
+├── index.css
+├── main.jsx
+
+## 🧪 Known Behaviors
+
+- Authentication state persists on page refresh
+
+- Direct access to protected routes redirects correctly based on auth status
+
+- Invalid credentials trigger an error notification
+
+## 🙏 Credits
+
+Movie data provided by TMDB
+
+UI inspired by Netflix
+
+Learning & resources from the GreatStack YouTube channel
+
+## 📄 License
+
+This project is for educational and portfolio purposes only.
+Netflix name and branding are used for demonstration only.
